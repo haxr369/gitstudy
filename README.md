@@ -18,7 +18,7 @@
 -   CI / CD :
 -   Frontend : HTML TailwindCSS JavaScript TypeScript React Next
 -   Backend : 뭐가 있는지... 흑... 몰라요... 작성해주세요 ㅎㅎㅎㅎ
--   - IDE : VSCODE
+-   IDE : VSCODE
 
 ### 🎯협업 도구
 
