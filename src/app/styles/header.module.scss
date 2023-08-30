@@ -1,0 +1,153 @@
+$bg-main: #f7323f;
+$white: #fff;
+$black: #000;
+$light-white: #ffffffcc;
+$light-black: #000000de;
+
+header {
+    position: fixed;
+    background-color: $bg-main;
+    width: 100%;
+    z-index: 999;
+    .gnb {
+        display: flex;
+        justify-content: flex-end;
+        padding: 12px 31px;
+        position: relative;
+        margin: 0 auto;
+
+        &-logo {
+            margin-right: auto;
+            color: $light-white;
+            a {
+                font-family: 'yg-jalnan';
+                color: #fff;
+                font-size: 1.5rem;
+            }
+        }
+        &-cata {
+            display: flex;
+            color: #fff;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            gap: 2rem;
+            transition: 0.3s;
+            li:hover .gnb-cata-sub {
+                display: flex;
+                opacity: 1;
+                transition: 0.3s;
+            }
+            &-link {
+                position: relative;
+                color: $light-white;
+                line-height: 2rem;
+                &:not(a) {
+                    cursor: default;
+                }
+                &:hover {
+                    color: $white;
+                }
+            }
+            &-sub {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                padding: 32px;
+                border-radius: 5px;
+                background-color: #fff;
+                color: var(--black);
+                font-size: 16px;
+                width: 184px;
+                top: 30px;
+                left: -65px;
+                box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.2);
+                opacity: 0;
+            }
+        }
+        .btn {
+            &-srch {
+                position: absolute;
+                right: 396px;
+                top: 16px;
+                cursor: pointer;
+                z-index: 10;
+                transition: 0.3s;
+                &.opened {
+                    right: 797px;
+                    cursor: pointer;
+                }
+                &-icon {
+                    width: 30px;
+                    height: 30px;
+                    fill: #fff;
+                }
+            }
+            &-cancel {
+                margin-top: -2px;
+                &-icon {
+                    fill: $white;
+                }
+            }
+        }
+    }
+    .srch-bar {
+        display: flex;
+        position: absolute;
+        right: 31px;
+        width: 725px;
+        height: 21px;
+        background: none;
+        gap: 10px;
+        top: 18px;
+        transition: 1s;
+        &-wrap {
+            position: relative;
+            background: none;
+            flex-grow: 1;
+            input {
+                width: 100%;
+                height: 21px;
+                margin: 0;
+                background: none;
+                font-size: 18px;
+                color: $white;
+                &::placeholder {
+                    color: $light-white;
+                    font-size: 18px;
+                }
+            }
+            .btn-srch {
+                position: absolute;
+                left: -40px;
+                right: auto;
+                top: -2px;
+            }
+        }
+    }
+    &.scroll {
+        background-color: $white;
+        color: $light-black;
+        transition: all 0.4s;
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+        .gnb {
+            &-logo a {
+                color: $light-black;
+            }
+            &-cata-link {
+                color: $light-black;
+                &:hover {
+                    color: $light-black;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .gnb {
+        width: 1024px;
+    }
+    .srch-bar-wrap .btn-srch {
+        display: none;
+    }
+}
