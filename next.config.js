@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const path = {}
+
+const path = require('path')
 
 module.exports = {
     webpack: (config) => {
@@ -9,5 +10,8 @@ module.exports = {
             use: ['@svgr/webpack'],
         })
         return config
+    },
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'styles')],
     },
 }
