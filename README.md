@@ -16,7 +16,7 @@
 ### 🎯기술 스택
 
 -   CI / CD :
--   Frontend : HTML TailwindCSS JavaScript TypeScript React Next
+-   Frontend : HTML TailwindCSS JavaScript TypeScript React Next Sass
 -   Backend : 뭐가 있는지... 흑... 몰라요... 작성해주세요 ㅎㅎㅎㅎ
 -   IDE : VSCODE
 

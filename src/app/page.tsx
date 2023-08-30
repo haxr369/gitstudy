@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import style from './styles/test.module.scss'
+import Login from './page.login'
 
 export default function Home() {
     return (
@@ -109,6 +110,7 @@ export default function Home() {
                     </p>
                 </a>
             </div>
+            <Login></Login>
         </main>
     )
 }
