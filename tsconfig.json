@@ -21,7 +21,8 @@
             }
         ],
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "@inquiry/*":["./src/app/more/inquiry/*"], // 1대1 문의 컴포넌트 수정하려면 이 path 수정
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
