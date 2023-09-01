@@ -48,21 +48,13 @@ const HomeInfo = () => {
                             href="https://play.google.com/store/apps/details?id=kr.goodchoice.abouthere&pli=1"
                             target="_blank"
                             title="구글플레이 새창">
-                            <img
-                                src="./icons/banner_and.png"
-                                width="168px"
-                                alt=""
-                            />
+                            <img src="./icons/banner_and.png" alt="" />
                         </Link>
                         <Link
                             href="https://apps.apple.com/kr/app/yeogieottae-1deung-sugbag/id884043462?ign-mpt=uo%3D2"
                             target="_blank"
                             title="앱스토어 새창">
-                            <img
-                                src="./icons/banner_ios.png"
-                                width="168px"
-                                alt=""
-                            />
+                            <img src="./icons/banner_ios.png" alt="" />
                         </Link>
                     </div>
                 </div>
