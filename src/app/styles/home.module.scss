@@ -1,0 +1,184 @@
+.home {
+    h2 {
+        margin-bottom: 35px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    &Banner {
+        margin: 50px 0 0 0;
+        background: url(https://image.goodchoice.kr/images/web_v3/mainspot_2308.png)
+            50% 0% no-repeat;
+        background-size: 95% auto;
+        &Link {
+            aspect-ratio: 4/2;
+            display: block;
+        }
+    }
+    &Cata {
+        padding: 8px 0;
+        &List {
+            display: flex;
+            justify-content: space-evenly;
+            .item {
+                width: 163px;
+                &Link {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 4px;
+                    .box {
+                        &Img {
+                            display: block;
+                            width: 72px;
+                            height: 72px;
+                        }
+                        &Txt {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &Info {
+        margin-top: 78px;
+        padding: 0 31px;
+        &List {
+            display: flex;
+            gap: 1rem;
+            .item {
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                width: 473px;
+                &Link {
+                    display: flex;
+                    padding-right: 24px;
+                    gap: 1.5rem;
+                    color: rgba(0, 0, 0, 0.56);
+                    img {
+                        display: inline-block;
+                        width: 162px;
+                        height: 162px;
+                    }
+                    .boxTxt {
+                        display: flex;
+                        flex-direction: column;
+                        padding-top: 38px;
+                        gap: 1rem;
+                        .tit {
+                            font-weight: normal;
+                            color: #00796b;
+                            font-size: 1.25rem;
+                            line-height: 1.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &Appdown {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 64px 0 78px;
+        &Box {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            top: 0;
+            bottom: 0;
+            .txt {
+                font-size: 28px;
+            }
+            .icons {
+                display: flex;
+                gap: 0.5rem;
+                img {
+                    display: inline-block;
+                    width: 168px;
+                }
+            }
+        }
+    }
+    &Swiper {
+        padding: 0 31px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home {
+        &Banner {
+            margin: 0;
+            aspect-ratio: 4/2;
+            margin: 15px 0 10px;
+            &Link {
+                aspect-ratio: 4/2;
+            }
+        }
+        &Cata {
+            padding: 8px 0;
+            &List {
+                .item {
+                    &Link {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 4px;
+                        .box {
+                            &Img {
+                                display: block;
+                                width: 50px;
+                                height: 50px;
+                            }
+                            &Txt {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &Info {
+            margin-top: 23px;
+            padding: 0 16px;
+            &List {
+                flex-direction: column;
+                .item {
+                    width: 100%;
+                    padding: 10px 0;
+                    border: none;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                    &Link {
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+                        .boxTxt {
+                            padding: 0;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+        &Appdown {
+            &Box {
+                .txt {
+                    font-size: 20px;
+                }
+                .icons {
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+        &Swiper {
+            padding: 0 16px;
+        }
+    }
+}
