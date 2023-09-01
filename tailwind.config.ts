@@ -24,46 +24,6 @@ const config: Config = {
         },
         extend: {},
     },
-    plugins: [
-        function ({ addComponents }) {
-            const Header = {
-                header: {
-                    position: 'fixed',
-                    backgroundColor: '#f7323f',
-                    width: '100%',
-                    zIndex: '999',
-                    transition: '0.4s',
-                    '.gnb-logo': {
-                        color: '#ffffff',
-                    },
-                    '.gnb-cata-link': {
-                        position: 'relative',
-                        color: '#ffffffcc',
-                        lineHeight: '2rem',
-                        '&:hover': {
-                            color: '#ffffff',
-                        },
-                    },
-                },
-                '.scroll': {
-                    backgroundColor: '#ffffff',
-                    color: '#000000de',
-                    transition: '0.4s',
-                    boxShadow: '0px 2px 3px 0px rgba(0,0,0,0.1)',
-                    '.gnb-logo a': {
-                        color: '#f7323f',
-                    },
-                    '.gnb-cata-link': {
-                        color: '#000000de',
-                        '&:hover': {
-                            color: '#000000de',
-                        },
-                    },
-                },
-            }
-
-            addComponents(Header)
-        },
-    ],
+    plugins: [],
 }
 export default config

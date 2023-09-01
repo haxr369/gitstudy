@@ -1,0 +1,51 @@
+.footer {
+    position: relative;
+    padding: 63px 31px 40px;
+    border-top: 1px solid rgab(0, 0, 0, 0.8);
+    background-color: #f5f5f5;
+    font-size: 13px;
+    line-height: 20px;
+    &Wrap {
+        margin: auto;
+    }
+    &Link {
+        display: flex;
+        flex-wrap: wrap;
+        &Item {
+            flex-shrink: 0;
+            color: rgba(0, 0, 0, 0.38);
+        }
+    }
+    .call {
+        padding: 37px 0 24px;
+        color: rgba(0, 0, 0, 0.38);
+        flex-shrink: 0;
+        b {
+            margin-right: 10px;
+        }
+    }
+    .addr {
+        color: rgba(0, 0, 0, 0.38);
+        &Comp {
+            padding-bottom: 13px;
+        }
+        &Info {
+            padding-bottom: 6px;
+            display: block;
+        }
+    }
+    a {
+        display: inline-block;
+    }
+    .divider {
+        display: inline-block;
+        text-align: center;
+        width: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footerWrap {
+        width: 1024px;
+    }
+}

@@ -4,7 +4,7 @@ $black: #000;
 $light-white: #ffffffcc;
 $light-black: #000000de;
 
-header {
+.header {
     position: fixed;
     background-color: $bg-main;
     width: 100%;
@@ -16,7 +16,7 @@ header {
         position: relative;
         margin: 0 auto;
 
-        &-logo {
+        &Logo {
             margin-right: auto;
             color: $light-white;
             a {
@@ -25,22 +25,24 @@ header {
                 font-size: 1.5rem;
             }
         }
-        &-cata {
+        &Cata {
             display: flex;
             color: #fff;
             font-size: 1.125rem;
             line-height: 1.75rem;
             gap: 2rem;
             transition: 0.3s;
-            li:hover .gnb-cata-sub {
+            li:hover .gnbCataSub {
                 display: flex;
                 opacity: 1;
                 transition: 0.3s;
             }
-            &-link {
+            &Link {
                 position: relative;
                 color: $light-white;
                 line-height: 2rem;
+                display: block;
+                margin-top: 2px;
                 &:not(a) {
                     cursor: default;
                 }
@@ -48,14 +50,14 @@ header {
                     color: $white;
                 }
             }
-            &-sub {
+            &Sub {
                 display: none;
                 flex-direction: column;
                 position: absolute;
                 padding: 32px;
                 border-radius: 5px;
                 background-color: #fff;
-                color: var(--black);
+                color: $light-black;
                 font-size: 16px;
                 width: 184px;
                 top: 30px;
@@ -65,7 +67,7 @@ header {
             }
         }
         .btn {
-            &-srch {
+            &Srch {
                 position: absolute;
                 right: 396px;
                 top: 16px;
@@ -76,21 +78,25 @@ header {
                     right: 797px;
                     cursor: pointer;
                 }
-                &-icon {
+                &Icon {
                     width: 30px;
                     height: 30px;
-                    fill: #fff;
+                    fill: $white;
                 }
             }
-            &-cancel {
+            .opened {
+                right: 797px;
+                cursor: pointer;
+            }
+            &Cancel {
                 margin-top: -2px;
-                &-icon {
+                &Icon {
                     fill: $white;
                 }
             }
         }
     }
-    .srch-bar {
+    .srchBar {
         display: flex;
         position: absolute;
         right: 31px;
@@ -100,7 +106,7 @@ header {
         gap: 10px;
         top: 18px;
         transition: 1s;
-        &-wrap {
+        &Wrap {
             position: relative;
             background: none;
             flex-grow: 1;
@@ -116,7 +122,7 @@ header {
                     font-size: 18px;
                 }
             }
-            .btn-srch {
+            .btnSrch {
                 position: absolute;
                 left: -40px;
                 right: auto;
@@ -130,13 +136,27 @@ header {
         transition: all 0.4s;
         box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
         .gnb {
-            &-logo a {
-                color: $light-black;
+            &Logo a {
+                color: $bg-main;
             }
-            &-cata-link {
+            &CataLink {
                 color: $light-black;
                 &:hover {
                     color: $light-black;
+                }
+            }
+            .btn {
+                &SrchIcon {
+                    fill: $light-black;
+                }
+                &CancelIcon {
+                    fill: $light-black;
+                }
+            }
+            .srchBarWrap input {
+                color: $light-black;
+                &::placeholder {
+                    color: #a1a1a1;
                 }
             }
         }
@@ -147,7 +167,7 @@ header {
     .gnb {
         width: 1024px;
     }
-    .srch-bar-wrap .btn-srch {
+    .srchBarWrap .btnSrch {
         display: none;
     }
 }
