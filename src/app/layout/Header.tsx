@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search'
 
 import SrchBar from '../components/SrchBar'
 
-import '../styles/header.css'
+import style from '../styles/header.module.scss'
 
 export const navLinks = [
     // path 수정 필요 - 20230825 by oliv (수정 완료시 주석 삭제)
@@ -63,26 +63,38 @@ const Header = () => {
         setsrchBarOpen(!srchBarOpen)
     }
     return (
-        <header className={scrPosition < 60 ? '' : 'scroll'}>
-            <div className="gnb">
-                <h1 className="gnb-logo">
+        <header
+            className={
+                scrPosition < 60
+                    ? style.header
+                    : `${style.header} ${style.scroll}`
+            }>
+            <div className={style.gnb}>
+                <h1 className={style.gnbLogo}>
                     <Link href="/">여기어때.</Link>
                 </h1>
                 <button
                     type="button"
-                    className={srchBarOpen ? 'btn-srch opened' : 'btn-srch'}
+                    className={
+                        srchBarOpen
+                            ? `${style.btnSrch} ${style.opened}`
+                            : style.btnSrch
+                    }
                     onClick={handleSrchBar}>
-                    <SearchIcon className="btn-srch-icon" />
+                    <SearchIcon className={style.btnSrchIcon} />
                     <span className="blind">검색</span>
                 </button>
-                <ul className={srchBarOpen ? 'gnb-cata hide' : 'gnb-cata'}>
+                <ul
+                    className={
+                        srchBarOpen ? `${style.gnbCata} hide` : style.gnbCata
+                    }>
                     {navLinks.map((link, idx) => {
                         if (link.path !== '') {
                             return (
                                 <li key={idx}>
                                     <Link
                                         href={link.path}
-                                        className="gnb-cata-link">
+                                        className={style.gnbCataLink}>
                                         {link.name}
                                     </Link>
                                 </li>
@@ -90,9 +102,9 @@ const Header = () => {
                         } else {
                             return (
                                 <li key={idx}>
-                                    <span className="gnb-cata-link">
+                                    <span className={style.gnbCataLink}>
                                         {link.name}
-                                        <ul className="gnb-cata-sub">
+                                        <ul className={style.gnbCataSub}>
                                             {link.sub.map((subLink, subIdx) => {
                                                 return (
                                                     <li key={subIdx}>

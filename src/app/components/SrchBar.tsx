@@ -2,24 +2,26 @@ import React from 'react'
 import SearchIcon from '@mui/icons-material/Search'
 import CloseIcon from '@mui/icons-material/Close'
 
+import style from '../styles/header.module.scss'
+
 const SearchBar = ({ srchBarOpen, handleSrchBar }) => {
     return (
-        <div className="srch-bar">
-            <div className="srch-bar-wrap">
+        <div className={style.srchBar}>
+            <div className={style.srchBarWrap}>
                 <input
                     type="text"
                     id="keyword"
                     placeholder="지역, 숙소명"
                     autoComplete="off"
                 />
-                <button type="button" className="btn-srch">
-                    <SearchIcon className="btn-srch-icon" />
+                <button type="button" className={style.btnSrch}>
+                    <SearchIcon className={style.btnSrchIcon} />
                     <span className="blind">검색</span>
                 </button>
             </div>
-            <button className="btn-cancel">
+            <button className={style.btnCancel}>
                 <CloseIcon
-                    className="btn-cancel-icon"
+                    className={style.btnCancelIcon}
                     onClick={() => handleSrchBar(srchBarOpen)}
                 />
                 <span className="blind">닫기</span>
