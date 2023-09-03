@@ -1,0 +1,218 @@
+.background {
+  width: 300px;
+  height: 800px;
+  border: 1px solid black;
+}
+
+.date_choice_box {
+  position: relative;
+  width: 100%;
+  margin-left: 24px;
+  border: 1px solid black;
+  padding-top: 27px;
+}
+
+.btn_date {
+  display: inline-block;
+  position: relative;
+  width: 246px;
+  height: 40px;
+  margin: 13px 0 32px 0;
+  padding: 0 0 0 39px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  background: rgba(250, 250, 250, 0.7) url(//image.goodchoice.kr/images/web_v3/ico_arr_down.png) right 8px bottom 50% no-repeat;
+  background-size: 24px auto;
+  font-size: 18px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.56);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.btn_date:hover {
+  cursor: pointer;
+}
+
+.btn_date::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 32px;
+  height: 32px;
+  background: url(//image.goodchoice.kr/images/web_v3/ico_cal_2.png) 0 0 no-repeat;
+  background-size: 32px auto;
+}
+
+.detail_cata_word {
+  padding-top: 31px;
+  margin: 0 24px;
+}
+
+.btn_wrap {
+  position: relative;
+  height: 64px;
+  padding: 0 24px;
+  border: 1px solid black;
+}
+
+.btn_wrap button:nth-child(1) {
+  float: left;
+  width: 120px;
+  border: 1px solid rgb(242, 7, 76);
+  background: #fff;
+  color: rgb(242, 7, 76);
+  margin-top: 13px;
+}
+
+.btn_wrap button:nth-child(2) {
+  float: right;
+  width: 120px;
+  border: 1px solid rgb(242, 7, 76);
+  background: rgb(242, 7, 76);
+  color: #fff;
+  margin-top: 13px;
+}
+
+.detail_checkbox il {
+  margin-bottom: 16px;
+}
+
+.detail_checkbox {
+  border: 1px solid black;
+}
+
+.detail_checkbox label {
+  padding: 0 0 0 10px;
+  height: 21px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.56);
+  vertical-align: top;
+}
+
+.detail_checkbox label:hover {
+  cursor: pointer;
+}
+
+.detail_checkbox input:hover {
+  cursor: pointer;
+}
+
+.personnel_box {
+  margin-left: 24px;
+  padding-top: 27px;
+  position: relative;
+  border: 1px solid black;
+}
+
+.personnel_box span {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(229, 16, 72);
+}
+
+.personnel_box button:first-child {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  background: url(//image.goodchoice.kr/images/web_v3/ico_minus.png) 50% 50% no-repeat;
+  background-size: 20px auto;
+}
+
+.personnel_box button:last-child {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: url(//image.goodchoice.kr/images/web_v3/ico_plus.png) 50% 50% no-repeat;
+  background-size: 20px auto;
+  text-indent: -9999px;
+}
+
+.pride_box {
+  margin-left: 24px;
+  padding-top: 27px;
+  border: 1px solid black;
+}
+
+.bed_type_box {
+  margin-left: 24px;
+  padding-top: 27px;
+  border: 1px solid black;
+  height: 120px;
+}
+
+.bed_type_box strong {
+  display: block;
+  position: relative;
+  margin-bottom: 21px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.56);
+}
+
+.bed_type_box div {
+  text-align: center;
+  overflow: hidden;
+  width: 304px;
+  margin-left: -20px;
+}
+
+.bed_type_box p {
+  display: inline-block;
+  float: left;
+  width: 25%;
+}
+
+.bed_type_box input {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.bed_type_box .label_room1 {
+  position: relative;
+  width: 76px;
+  padding: 28px 0 0 0;
+  height: 46px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 13px;
+  line-height: normal;
+  color: rgba(0, 0, 0, 0.87);
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+}
+
+.bed_type_box .label_room1::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 48px;
+  height: 24px;
+  margin: 0 0 0 -24px;
+  background: url(//image.goodchoice.kr/images/web_v3/ico_room.png) 0 0 no-repeat;
+  background-size: 192px auto;
+}/*# sourceMappingURL=RoomCata.module.css.map */

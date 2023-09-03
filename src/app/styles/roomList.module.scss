@@ -1,0 +1,109 @@
+$pt-yellow: rgb(255, 167, 38);
+$pt-green: rgb(22, 141, 133);
+
+.roomList {
+    &Item {
+        padding: 16px;
+        background-color: rgba(254, 251, 245, 1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+        a {
+            display: flex;
+            gap: 16px;
+        }
+        .box {
+            &Img {
+                display: inline-block;
+                overflow: hidden;
+                position: relative;
+                height: 275px;
+                text-align: center;
+                aspect-ratio: 1/1.8;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0%;
+                    height: 100%;
+                    width: auto;
+                }
+            }
+            &Txt {
+                display: flex;
+                flex-grow: 1;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 16px 0;
+                .info {
+                    display: flex;
+                    flex-direction: column;
+
+                    &Tit {
+                        font-size: 22px;
+                        line-height: 1;
+                        padding-top: 8px;
+                    }
+                    &Addr {
+                        font-size: 18px;
+                        line-height: 19px;
+                    }
+                    &Score {
+                        font-size: 18px;
+                        line-height: 19px;
+                        color: $pt-yellow;
+                        em {
+                            display: inline-block;
+                            height: 17px;
+                            padding: 1px 2px;
+                            position: relative;
+                            top: -1px;
+                            border-radius: 4px;
+                            background: $pt-yellow;
+                            font-size: 14px;
+                            line-height: 15px;
+                            color: #fff;
+                        }
+                    }
+                    &Opt {
+                        color: rgba(0, 0, 0, 0.56);
+                        font-size: 18px;
+                        line-height: 19px;
+                    }
+                    &Evt {
+                        color: $pt-green;
+                        font-size: 18px;
+                        line-height: 1.4;
+                    }
+                }
+                .price {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    font-size: 20px;
+                    line-height: 1;
+                    padding: 9px 0 0 0;
+                    gap: 9px;
+                    &Detail {
+                        color: #000000d8;
+                        .badge {
+                            position: relative;
+                            top: -1px;
+                            padding: 0 3px;
+                            font-size: 14px;
+                            background-color: rgba(248, 113, 111, 1);
+                            color: #fff;
+                            vertical-align: bottom;
+                        }
+                        .bold {
+                            color: rgba(0, 0, 0, 1);
+                            font-weight: bold;
+                            &.pink {
+                                color: rgba(248, 113, 111, 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

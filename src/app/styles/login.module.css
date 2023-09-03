@@ -17,8 +17,9 @@
 
 .logo a {
   text-decoration: none;
-  color: #551a8b;
+  color: #F7323F;
   font-size: 24px;
+  font-family: "best_choice";
 }
 
 .snsBtn {
@@ -70,6 +71,16 @@
   line-height: 40px;
 }
 
+.space_or::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
 .login_input {
   width: 100%;
   padding: 0px 16px 0px 46px;
@@ -101,10 +112,6 @@
   border: none;
 }
 
-.logo a {
-  font-family: "best_choice";
-}
-
 .join_box {
   width: 50%;
   text-align: center;
@@ -124,4 +131,25 @@
   position: relative;
   display: flex;
   flex-direction: row;
+}
+
+.join_box::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 1px;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1024px) {
+  .section_box {
+    width: 100%;
+  }
+  .background {
+    padding: 24px;
+    align-items: flex-start;
+  }
 }/*# sourceMappingURL=login.module.css.map */
