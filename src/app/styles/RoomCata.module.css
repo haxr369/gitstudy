@@ -1,15 +1,32 @@
+.detail_div {
+  padding-left: 24px;
+}
+
+.bed_type_box, .pride_box, .personnel_box, .detail_checkbox, .date_choice_box {
+  margin-left: 24px;
+  padding-top: 27px;
+  position: relative;
+}
+
+.btn_wrap button:nth-child(2), .btn_wrap button:nth-child(1) {
+  width: 120px;
+  border: 1px solid rgb(242, 7, 76);
+  margin-top: 13px;
+  padding: 7.5px;
+  border-radius: 4px;
+}
+
 .background {
   width: 300px;
-  height: 800px;
+  height: 1000px;
   border: 1px solid black;
 }
 
 .date_choice_box {
-  position: relative;
   width: 100%;
-  margin-left: 24px;
-  border: 1px solid black;
-  padding-top: 27px;
+}
+.date_choice_box h3 {
+  font-weight: bold;
 }
 
 .btn_date {
@@ -29,12 +46,10 @@
   text-align: left;
   box-sizing: border-box;
 }
-
-.btn_date:hover {
+.btn_date :hover {
   cursor: pointer;
 }
-
-.btn_date::after {
+.btn_date ::after {
   display: inline-block;
   content: "";
   position: absolute;
@@ -46,44 +61,40 @@
   background-size: 32px auto;
 }
 
-.detail_cata_word {
-  padding-top: 31px;
-  margin: 0 24px;
+.detail_div {
+  margin-top: 24px;
+}
+.detail_div .detail_cata_word {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.detail_title {
+  margin-bottom: 21px;
+  display: block;
+  position: relative;
+  font-weight: bold;
 }
 
 .btn_wrap {
   position: relative;
   height: 64px;
   padding: 0 24px;
-  border: 1px solid black;
 }
-
 .btn_wrap button:nth-child(1) {
   float: left;
-  width: 120px;
-  border: 1px solid rgb(242, 7, 76);
   background: #fff;
   color: rgb(242, 7, 76);
-  margin-top: 13px;
 }
-
 .btn_wrap button:nth-child(2) {
   float: right;
-  width: 120px;
-  border: 1px solid rgb(242, 7, 76);
   background: rgb(242, 7, 76);
   color: #fff;
-  margin-top: 13px;
 }
 
 .detail_checkbox il {
   margin-bottom: 16px;
 }
-
-.detail_checkbox {
-  border: 1px solid black;
-}
-
 .detail_checkbox label {
   padding: 0 0 0 10px;
   height: 21px;
@@ -95,44 +106,35 @@
   color: rgba(0, 0, 0, 0.56);
   vertical-align: top;
 }
-
 .detail_checkbox label:hover {
   cursor: pointer;
 }
-
 .detail_checkbox input:hover {
   cursor: pointer;
 }
 
-.personnel_box {
-  margin-left: 24px;
-  padding-top: 27px;
-  position: relative;
-  border: 1px solid black;
-}
-
 .personnel_box span {
-  display: block;
+  position: absolute;
+  top: 25px;
+  right: 75px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
   color: rgb(229, 16, 72);
 }
-
 .personnel_box button:first-child {
   position: absolute;
   top: 25px;
-  left: 10px;
+  right: 120px;
   width: 24px;
   height: 24px;
   background: url(//image.goodchoice.kr/images/web_v3/ico_minus.png) 50% 50% no-repeat;
   background-size: 20px auto;
 }
-
 .personnel_box button:last-child {
   position: absolute;
   top: 25px;
-  right: 0;
+  right: 15px;
   width: 24px;
   height: 24px;
   background: url(//image.goodchoice.kr/images/web_v3/ico_plus.png) 50% 50% no-repeat;
@@ -140,19 +142,16 @@
   text-indent: -9999px;
 }
 
-.pride_box {
-  margin-left: 24px;
-  padding-top: 27px;
-  border: 1px solid black;
+.pride_box span {
+  color: #ea1c51;
+}
+.pride_box .progress_div {
+  text-align: center;
 }
 
 .bed_type_box {
-  margin-left: 24px;
-  padding-top: 27px;
-  border: 1px solid black;
   height: 120px;
 }
-
 .bed_type_box strong {
   display: block;
   position: relative;
@@ -161,20 +160,17 @@
   font-weight: bold;
   color: rgba(0, 0, 0, 0.56);
 }
-
 .bed_type_box div {
   text-align: center;
   overflow: hidden;
   width: 304px;
   margin-left: -20px;
 }
-
 .bed_type_box p {
   display: inline-block;
   float: left;
   width: 25%;
 }
-
 .bed_type_box input {
   position: absolute;
   z-index: -1000;
@@ -187,7 +183,6 @@
   padding: 0;
   border: 0;
 }
-
 .bed_type_box .label_room1 {
   position: relative;
   width: 76px;
@@ -203,7 +198,6 @@
   cursor: pointer;
   text-align: center;
 }
-
 .bed_type_box .label_room1::after {
   display: inline-block;
   content: "";
@@ -215,4 +209,9 @@
   margin: 0 0 0 -24px;
   background: url(//image.goodchoice.kr/images/web_v3/ico_room.png) 0 0 no-repeat;
   background-size: 192px auto;
+}
+
+.detail_two_line_list_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }/*# sourceMappingURL=RoomCata.module.css.map */
