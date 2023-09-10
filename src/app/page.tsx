@@ -6,7 +6,6 @@ import HomeInfo from './components/HomeInfo'
 import HomeSwiper from './components/HomeSwiper'
 
 import style from './styles/home.module.scss'
-import Login from './user-page/page'
 
 export default function Home() {
     return (

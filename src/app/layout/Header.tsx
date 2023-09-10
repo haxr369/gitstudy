@@ -1,7 +1,7 @@
-'use client'
-
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
+
 import SearchIcon from '@mui/icons-material/Search'
 
 import SrchBar from '../components/SrchBar'
@@ -47,9 +47,11 @@ export const navLinks = [
 ]
 
 const Header = () => {
-    // 스크롤시 header 스타일 변경
+    // 로그인 페이지에서 Header 컴포넌트 가리기
+    const pathname = usePathname()
+    if (pathname === '/login') return null
 
-    //로그인 페이지에서 렌더링 되지 않도록 해야함.
+    // 스크롤시 header 스타일 변경
 
     const [scrPosition, setscrPosition] = useState(0)
     const checkScroll = () => {

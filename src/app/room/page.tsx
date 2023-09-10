@@ -8,8 +8,6 @@ export default function Room() {
         <main className="content">
             <div className={`inner`}>
                 <RoomList />
-            </div>
-            <div>
                 <RoomCata />
             </div>
         </main>
