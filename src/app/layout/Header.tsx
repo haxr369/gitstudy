@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search'
@@ -47,9 +49,7 @@ export const navLinks = [
 const Header = () => {
     // 스크롤시 header 스타일 변경
 
-    // if (window.location.pathname === '/user-page') return null
-    // 특정 페이지에 Header 컴포넌트 렌더링되지 않도록 하는 함수
-    // issue : 새로고침해야 제거되고, 제거된 이후론 다른 페이지에서도 제거된 상태 유지
+    //로그인 페이지에서 렌더링 되지 않도록 해야함.
 
     const [scrPosition, setscrPosition] = useState(0)
     const checkScroll = () => {

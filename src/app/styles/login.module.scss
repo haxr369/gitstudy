@@ -4,9 +4,6 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-}
-
-.section_box {
     position: relative;
 }
 
@@ -14,27 +11,29 @@
     text-align: center;
     margin-bottom: 16px;
 }
-.logo a {
-    text-decoration: none;
-    color: #f7323f;
-    font-size: 24px;
-    font-family: 'best_choice';
+.logo {
+    a {
+        text-decoration: none;
+        color: #f7323f;
+        font-size: 24px;
+        font-family: 'best_choice';
+    }
 }
 
-.snsBtn {
-    padding: 0px 91px;
-    height: 56px;
-    border-radius: 5px;
-    margin-bottom: 8px;
-    font-size: 16px;
-    border: none;
-    color: white;
-    :hover {
-        cursor: pointer;
-    }
-    .snsBtn_box {
-        display: flex;
-        flex-direction: column;
+.snsBtn_box {
+    display: flex;
+    flex-direction: column;
+    .snsBtn {
+        padding: 0px 91px;
+        height: 56px;
+        border-radius: 5px;
+        margin-bottom: 8px;
+        font-size: 16px;
+        border: none;
+        color: white;
+        :hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -67,16 +66,16 @@
         font-size: 16px;
         line-height: 40px;
     }
+}
 
-    ::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: rgba(0, 0, 0, 0.08);
-    }
+.space_or::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
 }
 
 .login_input {
@@ -143,7 +142,7 @@
 }
 
 @media (max-width: 1024px) {
-    .section_box {
+    .form_box {
         width: 100%;
     }
     .background {
