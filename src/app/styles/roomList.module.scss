@@ -18,7 +18,8 @@ $pt-green: rgb(22, 141, 133);
                 overflow: hidden;
                 position: relative;
                 height: 275px;
-                padding-left:20%;
+
+                padding-left: 20%;
                 min-width: 152px;
                 img {
                     position: absolute;
@@ -26,7 +27,7 @@ $pt-green: rgb(22, 141, 133);
                     left: 50%;
                     height: 100%;
                     object-fit: cover;
-                    transform:translate(-50%,-50%)
+                    transform: translate(-50%, -50%);
                 }
             }
             &Txt {
@@ -38,7 +39,9 @@ $pt-green: rgb(22, 141, 133);
                 .info {
                     display: flex;
                     flex-direction: column;
-                    gap:4px;
+
+                    gap: 4px;
+
                     &Tit {
                         font-size: 22px;
                         line-height: 1;

@@ -4,8 +4,9 @@ import style from '../styles/footer.module.scss'
 
 const Footer = () => {
     // 로그인 페이지에서 Footer 컴포넌트 가리기
+    //로그인 페이지에서 렌더링 되지 않도록 해야함.
     const pathname = usePathname()
-    if (pathname === '/login') return null
+    if (pathname === '/user') return null
 
     return (
         <footer className={style.footer}>

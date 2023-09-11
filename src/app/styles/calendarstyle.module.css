@@ -1,0 +1,40 @@
+.select_btn {
+  margin: 20px 0px;
+  width: 100%;
+  padding: 15px 0px;
+  border: 3px solid #f888a5;
+  color: #f2114c;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.calendar_box {
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  background-color: white;
+  z-index: 99;
+  top: 480px;
+  left: 25px;
+}
+.calendar_box .calendar_btn_wrap {
+  background-color: grey;
+  height: 50px;
+}
+
+.month_btn {
+  width: 50%;
+  color: black;
+  background-color: grey;
+  height: 100%;
+  border-left: 1px solid white;
+}
+
+.year_btn {
+  width: 50%;
+  color: black;
+  background-color: grey;
+  height: 100%;
+}/*# sourceMappingURL=calendarstyle.module.css.map */

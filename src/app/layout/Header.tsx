@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+
 import SearchIcon from '@mui/icons-material/Search'
 
 import SrchBar from '../components/SrchBar'
@@ -41,16 +42,17 @@ export const navLinks = [
     },
     {
         name: '로그인',
-        path: '/user-page',
+        path: '/user',
     },
 ]
 
 const Header = () => {
     // 로그인 페이지에서 Header 컴포넌트 가리기
     const pathname = usePathname()
-    if (pathname === '/login') return null
+    if (pathname === '/user') return null
 
     // 스크롤시 header 스타일 변경
+
     const [scrPosition, setscrPosition] = useState(0)
     const checkScroll = () => {
         setscrPosition(window.scrollY || document.documentElement.scrollTop)
@@ -67,6 +69,7 @@ const Header = () => {
     const handleSrchBar = () => {
         setsrchBarOpen(!srchBarOpen)
     }
+
     return (
         <header
             className={
