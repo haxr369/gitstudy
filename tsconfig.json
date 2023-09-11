@@ -5,11 +5,7 @@
          "allowJs": true,
         "skipLibCheck": true,
         "strict": false,
-<<<<<<< HEAD
          "noEmit": true,
-=======
-        "noEmit": true,
->>>>>>> dc6c13b19415dc08ef1dffe3cc35717cfe5ebc55
         "esModuleInterop": true,
         "module": "esnext",
         "moduleResolution": "bundler",

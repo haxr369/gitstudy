@@ -117,13 +117,13 @@ export default function Login() {
                 <form className={login_style.form_box}>
                     <input type="hidden"></input>
 
-                    <Logo></Logo>
-                    <SnsBtn_box></SnsBtn_box>
-                    <Space_or></Space_or>
-                    <Input_box></Input_box>
+                    <Logo />
+                    <SnsBtn_box />
+                    <Space_or />
+                    <Input_box />
 
-                    <Login_btn></Login_btn>
-                    <Login_footer></Login_footer>
+                    <Login_btn />
+                    <Login_footer />
                 </form>
             </main>
         </>
