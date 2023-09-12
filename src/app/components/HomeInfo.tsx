@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import style from '../styles/home.module.scss'
+import style from '@/app/styles/home.module.scss'
 
 export const homeInfo = [
     {

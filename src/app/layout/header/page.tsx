@@ -3,16 +3,15 @@ import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 import SearchIcon from '@mui/icons-material/Search'
+import SrchBar from '@/app/components/SrchBar'
 
-import SrchBar from '../components/SrchBar'
-
-import style from '../styles/header.module.scss'
+import style from '@/app/layout/header/header.module.scss'
 
 export const navLinks = [
     // path 수정 필요 - 20230825 by oliv (수정 완료시 주석 삭제)
     {
         name: '숙소찾기',
-        path: '/room',
+        path: '/room/motel',
     },
     {
         name: '예약내역',
@@ -20,7 +19,7 @@ export const navLinks = [
     },
     {
         name: '더보기',
-        path: '',
+        path: '/more',
         sub: [
             {
                 name: '공지사항',
@@ -42,7 +41,11 @@ export const navLinks = [
     },
     {
         name: '로그인',
+<<<<<<< HEAD:src/app/layout/header/page.tsx
+        path: '/login',
+=======
         path: '/user',
+>>>>>>> d23957bd7079acdc7fef5e6856c4652acabaa013:src/app/layout/Header.tsx
     },
 ]
 
