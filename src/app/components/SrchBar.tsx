@@ -2,7 +2,7 @@ import React from 'react'
 import SearchIcon from '@mui/icons-material/Search'
 import CloseIcon from '@mui/icons-material/Close'
 
-import style from '../styles/header.module.scss'
+import style from '@/app/layout/header/header.module.scss'
 
 const SearchBar = ({ srchBarOpen, handleSrchBar }) => {
     return (

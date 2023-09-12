@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import 'swiper/css'
 import 'swiper/css/autoplay'
-import style from '../styles/home.module.scss'
+import style from '@/app/styles/home.module.scss'
 
 const HomeSwiper = () => {
     return (

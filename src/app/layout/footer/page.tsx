@@ -1,6 +1,6 @@
 import React from 'react'
 import { usePathname } from 'next/navigation'
-import style from '../styles/footer.module.scss'
+import style from '@/app/layout/footer/footer.module.scss'
 
 const Footer = () => {
     // 로그인 페이지에서 Footer 컴포넌트 가리기

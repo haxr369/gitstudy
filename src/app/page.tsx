@@ -1,11 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import HomeCata from './components/HomeCata'
-import HomeInfo from './components/HomeInfo'
-import HomeSwiper from './components/HomeSwiper'
+import HomeCata from '@/app/components/HomeCata'
+import HomeInfo from '@/app/components/HomeInfo'
+import HomeSwiper from '@/app/components/HomeSwiper'
 
-import style from './styles/home.module.scss'
+import style from '@/app/styles/home.module.scss'
 
 export default function Home() {
     return (
