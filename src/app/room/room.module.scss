@@ -1,9 +1,13 @@
 $pt-yellow: rgb(255, 167, 38);
 $pt-green: rgb(22, 141, 133);
 
-
-.room{display: grid;grid-template-columns:296px auto;margin:40px auto;
-    &Side{margin:0 32px 0 31px;}
+.room {
+    display: grid;
+    grid-template-columns: 296px auto;
+    margin: 40px auto;
+    &Side {
+        margin: 0 32px 0 31px;
+    }
     &List {
         &Item {
             padding: 16px;
@@ -21,7 +25,7 @@ $pt-green: rgb(22, 141, 133);
                     overflow: hidden;
                     position: relative;
                     height: 275px;
-                    padding-left:20%;
+                    padding-left: 20%;
                     min-width: 152px;
                     img {
                         position: absolute;
@@ -29,7 +33,7 @@ $pt-green: rgb(22, 141, 133);
                         left: 50%;
                         height: 100%;
                         object-fit: cover;
-                        transform:translate(-50%,-50%)
+                        transform: translate(-50%, -50%);
                     }
                 }
                 &Txt {
@@ -41,7 +45,7 @@ $pt-green: rgb(22, 141, 133);
                     .info {
                         display: flex;
                         flex-direction: column;
-                        gap:4px;
+                        gap: 4px;
                         &Tit {
                             font-size: 22px;
                             line-height: 1;
@@ -111,5 +115,102 @@ $pt-green: rgb(22, 141, 133);
             }
         }
     }
-
+    &Detail {
+        margin: 42px 32px 0 31px;
+        display: flex;
+        justify-content: space-between;
+        .box {
+            &Img {
+                flex-shrink: 0;
+                width: 490px;
+                background-color: #e9e9e9;
+            }
+            &Txt {
+                flex-shrink: 0;
+                width: 424px;
+                .tit {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 28px;
+                    line-height: 28px;
+                    margin-bottom: 5px;
+                }
+                .info {
+                    display: flex;
+                    gap: 5px;
+                    flex-direction: column;
+                    &Score {
+                        font-size: 18px;
+                        color: $pt-yellow;
+                        em {
+                            display: inline-block;
+                            height: 17px;
+                            padding: 1px 2px;
+                            position: relative;
+                            top: -1px;
+                            border-radius: 4px;
+                            background: $pt-yellow;
+                            font-size: 14px;
+                            line-height: 15px;
+                            color: #fff;
+                            margin-right: 5px;
+                        }
+                    }
+                    &Addr {
+                        font-size: 18px;
+                        color: rgba(0, 0, 0, 0.56);
+                    }
+                    &Opt {
+                        width: fit-content;
+                        padding: 3px 2px 2px 2px;
+                        background: #f4f4f4;
+                        line-height: normal;
+                        color: rgba(0, 0, 0, 0.56);
+                    }
+                    &Evt {
+                        margin: 8px 0 10px;
+                        font-size: 15px;
+                        line-height: 24px;
+                        color: #fff;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        position: relative;
+                        padding: 12px 20px;
+                        overflow: hidden;
+                        border-radius: 4px;
+                        background: linear-gradient(
+                            to right,
+                            #009abd 0%,
+                            #12b1a2 100%
+                        );
+                    }
+                    &Ceo {
+                        padding: 26px 24px;
+                        background: rgb(250, 250, 250);
+                        strong {
+                            display: block;
+                            margin-bottom: 15px;
+                            font-size: 16px;
+                            color: rgba(0, 0, 0, 0.87);
+                        }
+                        & > span {
+                            display: block;
+                            overflow: hidden;
+                            height: auto;
+                            font-size: 16px;
+                            line-height: 26px;
+                            color: rgba(0, 0, 0, 0.56);
+                            &.clamp {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                height: 52px;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
