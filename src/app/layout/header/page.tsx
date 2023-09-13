@@ -41,11 +41,7 @@ export const navLinks = [
     },
     {
         name: '로그인',
-<<<<<<< HEAD:src/app/layout/header/page.tsx
-        path: '/login',
-=======
         path: '/user',
->>>>>>> d23957bd7079acdc7fef5e6856c4652acabaa013:src/app/layout/Header.tsx
     },
 ]
 
