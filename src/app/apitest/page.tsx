@@ -1,5 +1,6 @@
 'use client'
 import { addItem, addRooms } from '@/app/apis/addItem'
+import getRoomsAPI from '@/app/apis/getRoomsAPI'
 
 function apitest() {
     const jsonData = {
@@ -106,6 +107,10 @@ function apitest() {
         await addRooms(roomsData)
     }
 
+    const onClickGetAPI = async () => {
+        await getRoomsAPI({ id: '1' })
+    }
+
     return (
         <>
             <div className="m-10">
@@ -115,6 +120,12 @@ function apitest() {
             <div className="m-10">
                 <h1> 숙소에 방 정보 입력하기</h1>
                 <button onClick={onClickRooms}>
+                    firebase에 방들 입력하기{' '}
+                </button>
+            </div>
+            <div className="m-10">
+                <h1> 숙소에 방 정보 입력하기</h1>
+                <button onClick={onClickGetAPI}>
                     firebase에 방들 입력하기{' '}
                 </button>
             </div>
