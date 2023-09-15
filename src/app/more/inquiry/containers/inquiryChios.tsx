@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import styles from '@inquiry/containers/module/inquiryChios.module.css'
 
 export const roomList = [

@@ -1,5 +1,5 @@
 'use client'
-import { RoomsInterface, addItem, addRooms } from '@/app/apis/addItem'
+import { addItem, addRooms } from '@/app/apis/addItem'
 
 function apitest() {
     const jsonData = {

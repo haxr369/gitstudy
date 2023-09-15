@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, SyntheticEvent } from 'react'
+import React, { useRef, SyntheticEvent } from 'react'
 import styles from '@inquiry/components/module/newInquiry.module.css'
 import InquryChios from '@inquiry/containers/inquiryChios'
 import InquryText from '@inquiry/containers/inquiryText'

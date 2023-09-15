@@ -2,7 +2,7 @@ import { useState } from 'react'
 import RoomCataCSS from '../../styles/RoomCata.module.css'
 
 export default function Personnel() {
-    let [Count, setCount] = useState(1)
+    const [count, setCount] = useState(1)
 
     return (
         <section className={RoomCataCSS.personnel_box}>
@@ -10,16 +10,16 @@ export default function Personnel() {
             <div>
                 <button
                     onClick={() => {
-                        if (Count > 1) {
-                            Count = Count - 1
-                            setCount(Count)
-                        }
+                        count > 1 ? setCount(count - 1) : null
+                        // if (Count > 1) {
+                        //     Count = Count - 1
+                        //     setCount(Count)
+                        // }
                     }}></button>
-                <span>{Count}</span>
+                <span>{count}</span>
                 <button
                     onClick={() => {
-                        Count = Count + 1
-                        setCount(Count)
+                        setCount(count + 1)
                     }}></button>
             </div>
         </section>

@@ -1,4 +1,4 @@
-import { createContext, use, useContext, useState } from 'react'
+import { useState } from 'react'
 import RoomCataCSS from '../../styles/RoomCata.module.css'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
@@ -11,7 +11,7 @@ export default function Date_choice() {
         <>
             <div className={RoomCataCSS.date_choice_box}>
                 <h3>날짜</h3>
-                <label for="Date" className={RoomCataCSS.btn_date}>
+                <label htmlFor="Date" className={RoomCataCSS.btn_date}>
                     <div className={RoomCataCSS.btn_date2}>
                         <DatePicker
                             id="Date"

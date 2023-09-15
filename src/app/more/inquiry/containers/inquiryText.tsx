@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import styles from '@inquiry/containers/module/inquiryText.module.css'
 interface InquryTextProps {
     textareaRef: React.RefObject<HTMLTextAreaElement>

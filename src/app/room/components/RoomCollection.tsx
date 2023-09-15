@@ -6,7 +6,7 @@ const RoomCollection = ({ id, rooms }: RoomsInterface) => {
         <>
             <article className="block w-962px mx-auto">
                 {rooms.map((room) => (
-                    <SingleRoom {...room} />
+                    <SingleRoom key={id + room.name} {...room} />
                 ))}
             </article>
         </>

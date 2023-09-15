@@ -1,5 +1,4 @@
 import RoomCataCSS from '../styles/RoomCata.module.css'
-import Calendar from '../components/catagory_component/Calendar'
 import Bed_type from '../components/catagory_component/Bed_type'
 import Date_choice from '../components/catagory_component/Date_choice'
 import Detail_btn from '../components/catagory_component/Detail_btn'

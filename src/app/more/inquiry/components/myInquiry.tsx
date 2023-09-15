@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import styles from '@inquiry/components/module/myInquiry.module.css'
 
 function MyInqury() {
-    const [inquries, SetInquries] = useState([])
-
     useEffect(() => {
         // axios 사용 get하는 함수 추가, 일단 문의 없도록.
     })

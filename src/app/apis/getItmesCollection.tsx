@@ -1,13 +1,6 @@
 import { RoomsInterface } from '@/app/apis/addItem'
 import { db } from '@firebase/firebase'
-import {
-    collection,
-    doc,
-    getDoc,
-    getDocs,
-    query,
-    where,
-} from 'firebase/firestore'
+import { collection, doc, getDoc, getDocs } from 'firebase/firestore'
 
 //
 export const getItemsCollection = async () => {

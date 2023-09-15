@@ -1,13 +1,6 @@
 import { ItemInterface } from '@/app/apis/addItem'
 import { db } from '@firebase/firebase'
-import {
-    collection,
-    doc,
-    getDoc,
-    getDocs,
-    query,
-    where,
-} from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 
 export const getItem = async ({
     id,
