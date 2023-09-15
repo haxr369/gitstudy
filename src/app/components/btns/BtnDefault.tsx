@@ -5,6 +5,7 @@ const BtnDefault = ({ ...props }) => {
     return (
         <button
             disabled={props.disable}
+            onClick={props.onClick}
             className={
                 // `
                 `${style.btnDefault} ${props.disable ? style.disable : ''} ${
