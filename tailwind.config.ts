@@ -14,7 +14,15 @@ const config: Config = {
             white: '#ffffff',
             black: '#000000de',
         },
-        extend: {},
+        extend: {
+            spacing: {
+                '424px': '424px',
+                '962px': '962px',
+            },
+            lineHeight: {
+                '48px': '48px',
+            },
+        },
     },
     plugins: [],
 }

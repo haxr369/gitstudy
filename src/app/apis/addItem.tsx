@@ -40,17 +40,19 @@ export const addItem = async (item: ItemInterface) => {
     await setDoc(doc(db, 'items', item.id), item)
 }
 
+export interface RoomInterface {
+    // 방 아이디
+    roomId: string
+    name: string
+    img: string
+    rentAllPrice: string
+    soldOut: boolean
+}
+
 export interface RoomsInterface {
     // 숙소 아이디
     id: string
-    rooms: {
-        // 방 아이디
-        roomId: string
-        name: string
-        img: string
-        rentAllPrice: string
-        soldOut: boolean
-    }[]
+    rooms: RoomInterface[]
 }
 
 export const addRooms = async (rooms: RoomsInterface) => {
