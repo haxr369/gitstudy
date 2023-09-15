@@ -1,41 +1,15 @@
 # 7주차 솔 과제 A 제출용
-- SSR로 상세 페이지 만들어보기 
+- SSR로 상세 페이지 만들어보기
+  - /src/app/api 작업
+  - /src/app/room/components.SingleRoom 작업
+  - /src/app/room/componentsRoomCollection 작업  
   - 매 기업마다 다이나믹 라우팅 설정
   - fetch에 cache 조건들 적용하면서 페이지 캐싱 써보기
+1. DB와 페이지가 동일한 경우, revalidate 전
+<img src="https://github.com/haxr369/gitstudy/assets/53365713/79020553-1bb1-46e6-9a32-ceafe5a9da86" alt="1번 사진" style="width:600px;"/>
 
-## 🏨여기어때 클론 프로젝트
+2. DB와 페이지가 다른 경우, 캐시된 페이지 응답
+<img src="https://github.com/haxr369/gitstudy/assets/53365713/f67eba9b-ed16-4e54-9f64-a78e42284713" alt="2번 사진" style="width:600px;"/>
 
-### 🎯프로젝트 소개
-
-추후 작성예정
-
-### 🎯프로젝트 기간
-
-추후 작성예정
-
-### 🎯작업자
-
--   Frontend : 변재정, 정윤정
--   Backend : 배규리, 오찬솔, 허수민
-
-### 🎯기술 스택
-
--   CI / CD :
--   Frontend : HTML TailwindCSS JavaScript TypeScript React Next Sass
--   Backend : 뭐가 있는지... 흑... 몰라요... 작성해주세요 ㅎㅎㅎㅎ
--   IDE : VSCODE
-
-### 🎯협업 도구
-
--   Notion
--   Figma
--   스웨거라고 했나...
--   또 뭐 있었는데...
-
-### 🎯구현 내용
-
-## 🎯 References
-
-이 프로젝트는 여기어때를 참고하여 학습용으로 작업 되었습니다.
-
-<!-- 이 프로젝트에서 사용된 모든 이미지는  (수정)에서 가져왔습니다. -->
+3. revalidate가 진행되어 새로운 페이지가 응답
+<img src="https://github.com/haxr369/gitstudy/assets/53365713/68fe16dc-680c-43b6-85ea-7dfabc3a4613" alt="3번 사진" style="width:600px;"/>
