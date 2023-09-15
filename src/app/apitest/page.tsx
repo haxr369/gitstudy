@@ -126,7 +126,7 @@ function apitest() {
             <div className="m-10">
                 <h1> 숙소에 방 정보 입력하기</h1>
                 <button onClick={onClickGetAPI}>
-                    firebase에 방들 입력하기{' '}
+                    firebase에 방들 가져오기{' '}
                 </button>
             </div>
         </>
