@@ -1,4 +1,4 @@
-export const getRoomsAPI = async ({ id }) => {
+const getRoomsAPI = async ({ id }) => {
     try {
         const response = await fetch(
             `https://firestore.googleapis.com/v1/projects/gogogosol/databases/(default)/documents/rooms/${id}`,
