@@ -16,6 +16,7 @@
 <img src="https://github.com/haxr369/gitstudy/assets/53365713/68fe16dc-680c-43b6-85ea-7dfabc3a4613" alt="3번 사진" style="width:600px;"/>
 
 <hr/>
+
 - CSR로 숙발 리스트 페이지 만들어보기
   - /src/app/room/[id]/page.tsx 작업
   - /src/app/room/components/roomSidebar.tsx 작업
