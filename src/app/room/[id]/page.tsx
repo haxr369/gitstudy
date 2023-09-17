@@ -5,11 +5,13 @@ import style from '@/app/room/room.module.scss'
 
 export default function Room() {
     return (
-        <div className={`inner ${style.room}`}>
-            <div className={style.roomSide}>
-                <RoomSidebar></RoomSidebar>
+        <>
+            <div className={`inner ${style.room}`}>
+                <div className={style.roomSide}>
+                    <RoomSidebar></RoomSidebar>
+                </div>
+                <RoomList />
             </div>
-            <RoomList />
-        </div>
+        </>
     )
 }

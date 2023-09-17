@@ -7,8 +7,8 @@ export default function RoomLayout({
 }) {
     //<PageTop title={title}></PageTop>
     return (
-        <div className="content">
-            <div className="inner px-[31px] flex gap-4">
+        <div className="mt-20">
+            <div className=" inner px-[31px] flex gap-4 ">
                 <Link href={`/room/motel`}>모텔</Link>
                 <Link href={`/room/hotel`}>호텔·리조트</Link>
                 <Link href={`/room/pension`}>펜션</Link>
