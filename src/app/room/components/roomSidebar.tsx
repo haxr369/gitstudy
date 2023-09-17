@@ -48,6 +48,24 @@ const RoomSidebar = (props: sidebarInterface) => {
                         value="foot volleyball court"
                         label="족구장"
                     />
+                    <FormControlLabel
+                        control={<Checkbox />}
+                        onChange={onChange}
+                        value="seminar room"
+                        label="세미나실"
+                    />
+                    <FormControlLabel
+                        control={<Checkbox />}
+                        onChange={onChange}
+                        value="karaoke"
+                        label="노래방"
+                    />
+                    <FormControlLabel
+                        control={<Checkbox />}
+                        onChange={onChange}
+                        value="spar"
+                        label="스파"
+                    />
                 </FormGroup>
             </section>
         </aside>
