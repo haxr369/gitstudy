@@ -1,5 +1,8 @@
 'use client'
+
+import { addAccommo } from '@/app/apis/addAccommo'
 import { addItem, addRooms } from '@/app/apis/addItem'
+import { getAccommos } from '@/app/apis/getAccommos'
 import getRoomsAPI from '@/app/apis/getRoomsAPI'
 
 function apitest() {
@@ -23,56 +26,6 @@ function apitest() {
     const onClickItme = async () => {
         await addItem(jsonData)
     }
-
-    // const jsonRoomsData: RoomsInterface = {
-    //     id: '1',
-    //     rooms: [
-    //         {
-    //             roomId: 'room1',
-    //             name: '스위트 룸',
-    //             img: 'https://example.com/room1.jpg',
-    //             rentAllPrice: '$200',
-    //             soldOut: false,
-    //         },
-    //         {
-    //             roomId: 'room2',
-    //             name: '스탠다드 룸',
-    //             img: 'https://example.com/room2.jpg',
-    //             rentAllPrice: '$150',
-    //             soldOut: true,
-    //         },
-    //         {
-    //             roomId: 'room3',
-    //             name: '디럭스 룸',
-    //             img: 'https://example.com/room3.jpg',
-    //             rentAllPrice: '$250',
-    //             soldOut: false,
-    //         },
-    //     ],
-    // rooms: [
-    //     {
-    //         roomId: '1',
-    //         name: '1번 방',
-    //         img: '../img/roomList1.jpg',
-    //         rentAllPrice: '80,000',
-    //         soldOut: false,
-    //     },
-    //     {
-    //         roomId: '2',
-    //         name: '2번 방',
-    //         img: '../img/roomList1.jpg',
-    //         rentAllPrice: '70,000',
-    //         soldOut: true,
-    //     },
-    //     {
-    //         roomId: '3',
-    //         name: '3번 방',
-    //         img: '../img/roomList1.jpg',
-    //         rentAllPrice: '70,000',
-    //         soldOut: true,
-    //     },
-    // ],
-    // }\
 
     const roomsData = {
         // 숙소 아이디
@@ -102,6 +55,89 @@ function apitest() {
             },
         ],
     }
+    const RoomLists = [
+        // path 수정 필요 - 20230825 by oliv (수정 완료시 주석 삭제)
+        {
+            id: '1',
+            name: '명동 밀리오레호텔',
+            img: '../img/roomList1.jpg',
+            score: '8.9',
+            scoreTxt: '만족해요',
+            infoAddr: '중구 충무로1가',
+            infoOpt: '예약취소가능',
+            infoEvt: '무료주차,넷플릭스 고객 개인 계정 로그인 필수',
+            rentHalf: '대실',
+            rentHalfPrice: '35,000',
+            rentAll: '숙박',
+            rentAllPrice: '80,000',
+            rentBedge: '예약특가',
+            tags: ['swimming pool', 'BBQ'],
+        },
+        {
+            id: '2',
+            name: '공덕 밀리오레호텔',
+            img: '../img/roomList1.jpg',
+            score: '8.9',
+            scoreTxt: '만족해요',
+            infoAddr: '마포구 충무로1가',
+            infoOpt: '예약취소가능',
+            infoEvt: '무료주차,넷플릭스 고객 개인 계정 로그인 필수',
+            rentHalf: '대실',
+            rentHalfPrice: '35,000',
+            rentAll: '숙박',
+            rentAllPrice: '80,000',
+            rentBedge: '예약특가',
+            tags: ['foot volleyball court', 'BBQ'],
+        },
+        {
+            id: '4',
+            name: '용산 밀리오레호텔',
+            img: '../img/roomList1.jpg',
+            score: '4.2',
+            scoreTxt: '만족해요',
+            infoAddr: '용산구 충무로1가',
+            infoOpt: '예약취소가능',
+            infoEvt: '무료주차,넷플릭스 고객 개인 계정 로그인 필수',
+            rentHalf: '대실',
+            rentHalfPrice: '35,000',
+            rentAll: '숙박',
+            rentAllPrice: '80,000',
+            rentBedge: '예약특가',
+            tags: ['foot volleyball court', 'seminar room'],
+        },
+        {
+            id: '5',
+            name: '구로 밀리오레호텔',
+            img: '../img/roomList1.jpg',
+            score: '9.9',
+            scoreTxt: '만족해요',
+            infoAddr: '중구 충무로1가',
+            infoOpt: '예약취소가능',
+            infoEvt: '무료주차,넷플릭스 고객 개인 계정 로그인 필수',
+            rentHalf: '대실',
+            rentHalfPrice: '35,000',
+            rentAll: '숙박',
+            rentAllPrice: '80,000',
+            rentBedge: '예약특가',
+            tags: ['karaoke', 'seminar room'],
+        },
+        {
+            id: '6',
+            name: '잠실 밀리오레호텔',
+            img: '../img/roomList1.jpg',
+            score: '7.9',
+            scoreTxt: '만족해요',
+            infoAddr: '송파구 충무로1가',
+            infoOpt: '예약취소가능',
+            infoEvt: '무료주차,넷플릭스 고객 개인 계정 로그인 필수',
+            rentHalf: '대실',
+            rentHalfPrice: '35,000',
+            rentAll: '숙박',
+            rentAllPrice: '80,000',
+            rentBedge: '예약특가',
+            tags: ['karaoke', 'spar'],
+        },
+    ]
 
     const onClickRooms = async () => {
         await addRooms(roomsData)
@@ -109,6 +145,16 @@ function apitest() {
 
     const onClickGetAPI = async () => {
         await getRoomsAPI({ id: '1' })
+    }
+
+    const onClickAddAccommo = async () => {
+        RoomLists.map(async (room) => {
+            await addAccommo(room)
+        })
+    }
+
+    const onClickGetAccommo = async () => {
+        await getAccommos({ tags: [] })
     }
 
     return (
@@ -127,6 +173,18 @@ function apitest() {
                 <h1> 숙소에 방 정보 입력하기</h1>
                 <button onClick={onClickGetAPI}>
                     firebase에 방들 가져오기{' '}
+                </button>
+            </div>
+            <div className="m-10">
+                <h1> 숙소들 입력하기</h1>
+                <button onClick={onClickAddAccommo}>
+                    firebase에 숙소 저장하기
+                </button>
+            </div>
+            <div className="m-10">
+                <h1> 숙소들 입력하기</h1>
+                <button onClick={onClickGetAccommo}>
+                    firebase에 숙소들 tag로 가져오기
                 </button>
             </div>
         </>
