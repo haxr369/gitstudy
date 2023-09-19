@@ -6,9 +6,10 @@ const getRoomsAPI = async ({ id }): Promise<RoomsInterface> => {
             `https://firestore.googleapis.com/v1/projects/gogogosol/databases/(default)/documents/rooms/${id}`,
             // 'https://firestore.googleapis.com/v1/projects/gogogosol/databases/(default)/documents/rooms/2',
             // 위 URL에서 "your-project-id"와 "rooms"를 실제 프로젝트 ID 및 컬렉션 이름으로 대체해야 합니다.
-            { next: { revalidate: 30 } },
+            // { next: { revalidate: 30 } },
         )
 
+        console.log('HELLO', response)
         if (!response.ok) {
             throw new Error('Failed to fetch data')
         }

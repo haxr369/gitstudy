@@ -5,17 +5,22 @@ import Checkbox from '@mui/material/Checkbox'
 
 interface sidebarInterface {
     tags: string[]
-    onSetTags: (newTags: string[]) => void
+    onSetTags: (newTags: string) => void
 }
+
+const valueLabels = [
+    { value: 'swimming pool', label: '수영장' },
+    { value: 'BBQ', label: 'BBQ' },
+    { value: 'foot volleyball court', label: '족구장' },
+    { value: 'karaoke', label: '노래방' },
+    { value: 'seminar room', label: '세미나실' },
+    { value: 'spar', label: '스파' },
+]
 
 const RoomSidebar = (props: sidebarInterface) => {
     const { tags, onSetTags } = props
     const onChange = (e) => {
-        if (e.target.checked) {
-            onSetTags([...tags, e.target.value])
-        } else {
-            onSetTags(tags.filter((tag) => tag !== e.target.value))
-        }
+        onSetTags(e.target.value)
     }
 
     return (
@@ -30,42 +35,19 @@ const RoomSidebar = (props: sidebarInterface) => {
             <section className="ml-6 pt-6">
                 <strong>공용시설</strong>
                 <FormGroup className="grid grid-cols-2">
-                    <FormControlLabel
-                        control={<Checkbox />}
-                        onChange={onChange}
-                        value="swimming pool"
-                        label="수영장"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox />}
-                        onChange={onChange}
-                        value="BBQ"
-                        label="BBQ"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox />}
-                        onChange={onChange}
-                        value="foot volleyball court"
-                        label="족구장"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox />}
-                        onChange={onChange}
-                        value="seminar room"
-                        label="세미나실"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox />}
-                        onChange={onChange}
-                        value="karaoke"
-                        label="노래방"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox />}
-                        onChange={onChange}
-                        value="spar"
-                        label="스파"
-                    />
+                    {valueLabels.map((valueLabel) => (
+                        <FormControlLabel
+                            key={valueLabel.value}
+                            control={
+                                <Checkbox
+                                    checked={tags.includes(valueLabel.value)}
+                                />
+                            }
+                            onChange={onChange}
+                            value={valueLabel.value}
+                            label={valueLabel.label}
+                        />
+                    ))}
                 </FormGroup>
             </section>
         </aside>

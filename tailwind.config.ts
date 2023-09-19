@@ -4,10 +4,13 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/c omponents/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
+        screens: {
+            mobile: { max: '600px' },
+        },
         colors: {
             // 여기어때 메인 컬러
             'main-red': '#f7323f',
