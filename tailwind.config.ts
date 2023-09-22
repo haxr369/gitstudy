@@ -10,6 +10,7 @@ const config: Config = {
     theme: {
         screens: {
             mobile: { max: '600px' },
+            desktop: { min: '601px' },
         },
         colors: {
             // 여기어때 메인 컬러

@@ -1,9 +1,12 @@
 'use client'
 
 import { addAccommo } from '@/app/apis/addAccommo'
+import { addEventData } from '@/app/apis/addEventData'
 import { addItem, addRooms } from '@/app/apis/addItem'
 import { getAccommos } from '@/app/apis/getAccommos'
+import { getEventCompany } from '@/app/apis/getEventPage'
 import getRoomsAPI from '@/app/apis/getRoomsAPI'
+// import { redirect } from 'next/dist/server/api-utils'
 
 function apitest() {
     const jsonData = {
@@ -157,6 +160,33 @@ function apitest() {
         await getAccommos({ tags: [] })
     }
 
+    const onClickAddEventData = async () => {
+        await addEventData()
+    }
+
+    const onClickGetEvent = async () => {
+        const res = await getEventCompany()
+        console.log(res)
+    }
+
+    const onClickGetInfo = async () => {
+        const res = await fetch('http://localhost:3000/apitest/api')
+
+        console.log('res1')
+        console.log(res.text)
+        // CORS 문제 발생
+        // const res2 = await fetch('http://localhost:8080', {
+        //     method: 'GET',
+        //     headers: {
+        //         'Content-Type': 'application/x-www-form-urlencoded',
+        //         JSESSIONID: '34DE6E46D7C17B7B6DDD8C96F73C0FDD',
+        //     },
+        // })
+        // console.log('res2')
+        // console.log(res2.text)
+        // redirect(res)
+    }
+
     return (
         <>
             <div className="m-10">
@@ -183,9 +213,42 @@ function apitest() {
             </div>
             <div className="m-10">
                 <h1> 숙소들 입력하기</h1>
+                <button onClick={onClickAddEventData}>
+                    firebase에 이벤트 추가하기
+                </button>
+            </div>
+            <div className="m-10">
+                <h1> 숙소들 입력하기</h1>
                 <button onClick={onClickGetAccommo}>
                     firebase에 숙소들 tag로 가져오기
                 </button>
+            </div>
+            <div className="m-10">
+                <h1> 숙소들 입력하기</h1>
+                <button onClick={onClickGetEvent}>
+                    firebase에 이벤트 값 가져오기
+                </button>
+            </div>
+
+            <div>
+                <a
+                    href="http://localhost:8080/oauth2/authorization/google"
+                    role="button">
+                    Google Login
+                </a>
+                <br />
+                <a
+                    href="http://localhost:8080/oauth2/authorization/kakao"
+                    role="button">
+                    Kakao Login
+                </a>
+                <br />
+                <a
+                    href="http://localhost:8080/oauth2/authorization/facebook"
+                    role="button">
+                    Facebook Login
+                </a>
+                <button onClick={onClickGetInfo}>내 정보 가져오기</button>
             </div>
         </>
     )

@@ -11,6 +11,9 @@ module.exports = {
         })
         return config
     },
+    images: {
+        domains: ['static.wanted.co.kr'],
+    },
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },

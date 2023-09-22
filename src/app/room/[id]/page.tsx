@@ -14,16 +14,6 @@ const Room = () => {
     const router = useRouter()
     const searchParams = useSearchParams()
 
-    // useEffect(() => {
-    //     const params = new URLSearchParams()
-    //     console.log('--parmas')
-    //     console.log(params)
-    //     tags.map((tag) => {
-    //         params.append('tag', tag)
-    //     })
-    //     router.push(`/room/${urlParams.id}?${params.toString()}`)
-    // }, [tags])
-
     useEffect(() => {
         const aco = async () => {
             await getAccommos({ tags: searchParams.getAll('tag') }).then(
